@@ -26,6 +26,10 @@ function delete_grid() {
 }
 
 function createNewGrid(gridSize) {
+    if (gridSize < 1 || gridSize > 100) {
+        alert("Input grid size invalid!"); 
+        return null;
+    }
     delete_grid();
 
     for (let i = 0; i < gridSize; i++) {
